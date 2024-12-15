@@ -1,0 +1,18 @@
+@use '../../constants.scss' as *;
+.header {
+    background-color: $color-yellow;
+    display: flex;
+    padding: 2rem 0 2rem 10rem;
+    .logo {
+        display: block;
+        height: 2.2rem;
+        width:10rem;
+        background-repeat: no-repeat;
+        background-image: url('https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.6.92/mercadolibre/logo_large_25years_v2.png')
+    }
+
+    input {
+        width: 50%;
+    }
+
+}
