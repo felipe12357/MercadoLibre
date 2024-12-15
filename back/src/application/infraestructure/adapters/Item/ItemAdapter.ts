@@ -3,10 +3,12 @@
 import { Item } from "../../../domain/entities/item/Item";
 import { ItemCategoriesModel } from "../../../domain/types/itemCategories.model";
 import { ItemDto } from "../../repositories/types/item.dto";
-import { IModelArrayAdapter } from "./IModelAdapter";
-import { ItemTransform } from "./ItemTransform";
+import { IModelAdapter, IModelArrayAdapter } from "./IModelAdapter";
 
-export class ItemAdapter extends ItemTransform implements IModelArrayAdapter<ItemDto,ItemCategoriesModel>  {
+export class ItemAdapter implements IModelArrayAdapter<ItemDto,ItemCategoriesModel>  {
+
+    constructor(private itemTransform:IModelAdapter<ItemDto,Item>){
+    }
 
     transform(dataList:ItemDto[]) {
 
@@ -14,7 +16,7 @@ export class ItemAdapter extends ItemTransform implements IModelArrayAdapter<Ite
         const items:Item[] =[];
 
         dataList.forEach(item =>{
-            items.push(super.format(item))
+            items.push(this.itemTransform.transform(item))
             categories.add(item.category_id)
         })
         
@@ -23,5 +25,5 @@ export class ItemAdapter extends ItemTransform implements IModelArrayAdapter<Ite
             categories:Array.from(categories)
         }
         return result;
-    }          
+    } 
 }

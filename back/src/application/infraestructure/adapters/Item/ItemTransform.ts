@@ -1,12 +1,13 @@
 
 import { Item } from "../../../domain/entities/item/Item";
 import { ItemDto } from "../../repositories/types/item.dto";
-import { IModelFormatAdapter } from "./IModelAdapter";
+import { IModelAdapter } from "./IModelAdapter";
 
-export class ItemTransform implements IModelFormatAdapter<ItemDto,Item> {
+
+export class ItemTransform implements IModelAdapter<ItemDto,Item> {
     private DECIMAL_NUMBER = 0; //NO ENCONTRE ESTE VALOR EN EL ENDPOINT POR ESO LO ASIGNO COMO CONSTANTE
 
-    format(item:ItemDto):Item {
+    transform(item:ItemDto):Item {
         const {title,id,condition} =item
         return {
             title,id,condition,
