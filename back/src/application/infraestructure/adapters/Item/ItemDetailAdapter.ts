@@ -1,5 +1,5 @@
 
-import { ItemDetail } from "../../../domain/entities/ItemDetail";
+import { ItemDetail } from "../../../domain/entities/item/ItemDetail";
 import { ItemDetailDescriptionDto } from "../../repositories/types/item.dto";
 import { IModelAdapter } from "./IModelAdapter";
 import { ItemTransform } from "./ItemTransform";

@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { check } from 'express-validator';
-import { getItemController, getItemListController } from '../controllers/itemController';
+import { getItemController, getItemListController } from '../../controllers/item/itemController';
+
 
 const router = Router();
 

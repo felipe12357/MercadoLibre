@@ -1,5 +1,5 @@
 import express from 'express';
-import itemRoutes from './api/routes/itemRoutes';
+import itemRoutes from './api/routes/item/itemRoutes';
 import signatureMiddleware from './api/middleware/signatureMiddleware';
 import cacheMiddleware from './api/middleware/cacheMiddleware';
 

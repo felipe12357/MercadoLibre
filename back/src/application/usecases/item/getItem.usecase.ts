@@ -1,7 +1,7 @@
 
-import { AxiosApiAdapter } from "../infraestructure/adapters/api/AxiosApiAdapter";
-import { ItemDetailAdapter } from "../infraestructure/adapters/Item/ItemDetailAdapter";
-import { ItemRepositoryImpl } from "../infraestructure/repositories/itemRepositoryImpl";
+import { AxiosApiAdapter } from "../../infraestructure/adapters/api/AxiosApiAdapter";
+import { ItemDetailAdapter } from "../../infraestructure/adapters/Item/ItemDetailAdapter";
+import { ItemRepositoryImpl } from "../../infraestructure/repositories/itemRepositoryImpl";
 
 
 const getItemUseCase = async (param:string)=>{

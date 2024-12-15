@@ -1,5 +1,6 @@
 
-import { Item } from "../../../domain/entities/Item";
+
+import { Item } from "../../../domain/entities/item/Item";
 import { ItemCategoriesModel } from "../../../domain/types/itemCategories.model";
 import { ItemDto } from "../../repositories/types/item.dto";
 import { IModelArrayAdapter } from "./IModelAdapter";

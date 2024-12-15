@@ -1,4 +1,5 @@
-import { Item } from "../../../domain/entities/Item";
+
+import { Item } from "../../../domain/entities/item/Item";
 import { ItemDto } from "../../repositories/types/item.dto";
 import { IModelFormatAdapter } from "./IModelAdapter";
 

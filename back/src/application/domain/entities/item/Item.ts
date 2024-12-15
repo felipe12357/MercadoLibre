@@ -1,4 +1,5 @@
-import { PriceModel } from "../types/price.model";
+import { PriceModel } from "../../types/price.model";
+
 
 
 export class Item {

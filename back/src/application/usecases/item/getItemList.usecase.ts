@@ -1,8 +1,8 @@
 
-import { AxiosApiAdapter } from "../infraestructure/adapters/api/AxiosApiAdapter";
-import { ItemAdapter } from "../infraestructure/adapters/Item/ItemAdapter";
+import { AxiosApiAdapter } from "../../infraestructure/adapters/api/AxiosApiAdapter";
+import { ItemAdapter } from "../../infraestructure/adapters/Item/ItemAdapter";
 
-import { ItemRepositoryImpl } from "../infraestructure/repositories/itemRepositoryImpl";
+import { ItemRepositoryImpl } from "../../infraestructure/repositories/itemRepositoryImpl";
 
 
 const getItemListUseCase = (param:string)=>{

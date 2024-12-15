@@ -1,4 +1,5 @@
-import { Item } from "../entities/Item"
+import { Item } from "../entities/item/Item"
+
 
 export type ItemCategoriesModel = {
     items:Item[],

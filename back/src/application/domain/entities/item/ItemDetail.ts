@@ -1,4 +1,4 @@
-import { PriceModel } from "../types/price.model";
+import { PriceModel } from "../../types/price.model";
 import { Item } from "./Item";
 
 export class ItemDetail extends Item {

@@ -5,7 +5,7 @@ import { ItemDescriptionDto, ItemDetailDescriptionDto, ItemDetailDto, ItemDto, r
 import { IApiAdapter } from "../adapters/api/IApiAdapter";
 import { IModelAdapter, IModelArrayAdapter } from "../adapters/Item/IModelAdapter";
 import { ItemCategoriesModel } from "../../domain/types/itemCategories.model";
-import { ItemDetail } from "../../domain/entities/ItemDetail";
+import { ItemDetail } from "../../domain/entities/item/ItemDetail";
 
 
 

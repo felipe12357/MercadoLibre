@@ -1,8 +1,10 @@
 import { Request, Response } from 'express';
-import { QueryType } from './itemTypes';
+
 import { validationResult } from 'express-validator';
-import getItemListUseCase from '../../application/usecases/getItemList.usecase';
-import getItemUseCase from '../../application/usecases/getItem.usecase';
+import { QueryType } from './itemTypes';
+import getItemListUseCase from '../../../application/usecases/item/getItemList.usecase';
+import getItemUseCase from '../../../application/usecases/item/getItem.usecase';
+
 
 
 export const getItemListController = async (req: Request, res: Response):Promise<void> => {
