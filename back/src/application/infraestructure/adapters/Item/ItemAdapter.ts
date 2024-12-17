@@ -12,18 +12,30 @@ export class ItemAdapter implements IModelArrayAdapter<ItemDto,ItemCategoriesMod
 
     transform(dataList:ItemDto[]) {
 
-        const categories:Set<string> = new Set();
         const items:Item[] =[];
+        const categories:string[] = [];
 
         dataList.forEach(item =>{
             items.push(this.itemTransform.transform(item))
-            categories.add(item.category_id)
+            categories.push(item.category_id);
         })
         
         const result:ItemCategoriesModel ={
             items,
-            categories:Array.from(categories)
+            categories:this.sortCategories(categories)
         }
         return result;
     } 
+
+    private sortCategories(categories:string[]):string[]{
+        const countObjects = categories.reduce((acc: { [key: string]: number }, num:string) => {
+            acc[num] = (acc[num] || 0) + 1;
+            return acc;
+          }, {});
+
+        const sortedCategories = Object.keys(countObjects)
+        .sort((a, b) => countObjects[b] - countObjects[a]);
+
+        return sortedCategories
+    }
 }
