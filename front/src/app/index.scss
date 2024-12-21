@@ -1,9 +1,9 @@
-
+@use 'bootstrap/dist/css/bootstrap.min.css';
 @use './constants.scss' as *;
 
 @font-face {
   font-family: 'proximanova';
-  src: url('./assets/fonts/proximanova.otf') format('truetype');
+  src: url('../assets/fonts/proximanova_light.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -13,6 +13,8 @@ body {
   font-family:'proximanova';
   height: 100%;
   width: 100%;
+  background-color: $color-white2;
+
 }
 
 input {
@@ -29,6 +31,22 @@ input {
     outline: none; 
     border: 1px solid #4169E1;
   }
+}
+
+h3,h4 {
+  color:$color-grey2;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+h4{
+  font-size: 1.2rem;
+}
+
+.form-switch .form-check-input {
+  width: 3rem;
+  cursor: pointer;
 }
 
 

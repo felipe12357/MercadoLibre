@@ -1,0 +1,40 @@
+@use '../../constants.scss' as *;
+.header {
+    background-color: $color-yellow;
+    display: flex;
+    padding: 2rem 0rem 0rem 1rem;
+    justify-content: flex-start;
+    overflow: hidden;
+    .logo {
+        min-width: 170px;
+        display: block;
+        height: 2.2rem;
+        width:10rem;
+        background-repeat: no-repeat;
+        background-image: url('https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.6.92/mercadolibre/logo_large_25years_v2.png')
+    }
+
+    .search-container{
+        width: 70%;
+        max-width: 32rem;
+    }
+
+}
+
+@media (min-width: $break-point-2) {
+    
+    .header{
+        .logo{
+            min-width: unset
+        }
+        padding-left: 10rem;
+        justify-content: unset;
+    }
+}
+
+@media (min-width: $break-point-3) {
+    
+    .header{
+        padding-left:15rem;
+    }
+}

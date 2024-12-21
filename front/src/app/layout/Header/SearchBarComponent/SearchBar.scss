@@ -1,0 +1,22 @@
+@use '../../../constants.scss' as *;
+.input-container{
+    position: relative;
+    input{
+        width:100%;
+
+    }
+
+    button{
+        position:absolute;
+        color: $color-grey;
+        bottom:0rem;
+        z-index: 1;
+        right: .5rem; 
+        height:-webkit-fill-available;
+        cursor:pointer;
+        background-color: $color-white;
+        border: 0;
+        border-left: 1px solid $color-silver;
+        margin: .5rem 0 .5rem 1rem;
+    }
+}

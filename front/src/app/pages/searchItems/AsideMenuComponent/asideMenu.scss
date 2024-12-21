@@ -1,0 +1,41 @@
+@use '../../../constants.scss' as *;
+ aside {
+    width: 250px;
+    font-size: .8rem;
+    h3 {
+        margin: 0px;
+    }
+    .send-option-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $color-white;
+        border: $border-style;
+        border-radius: $border-radius;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        font-size: .8rem;
+
+
+    
+        label{
+            svg {
+                margin-right: .2rem;
+            }
+
+            .icon-label {
+                font-weight:bolder;
+                font-style: italic;
+                text-transform: uppercase;
+            }
+
+
+        }
+    
+        p{
+            margin-top: .6rem;
+            margin-right: 1rem;
+        }
+    }
+ }
+
