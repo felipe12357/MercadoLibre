@@ -16,3 +16,16 @@
     }
 
 }
+
+@media (min-width: $break-point-3) {
+    .main-container{
+        padding: 1rem 5rem; 
+    }
+}
+
+@media (min-width: $break-point-4) {
+    
+    .main-container{
+        padding: 1rem 15rem; 
+    }
+}
