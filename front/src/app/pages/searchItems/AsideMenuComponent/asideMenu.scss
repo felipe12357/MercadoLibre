@@ -1,11 +1,23 @@
 @use '../../../constants.scss' as *;
- aside {
+.aside {
     width: 250px;
     font-size: .8rem;
-    h3 {
-        margin: 0px;
+
+    &_categories {
+        span {
+            cursor: pointer;
+        }
     }
-    .send-option-container{
+
+    &_results {
+        h3 {
+            margin: 0px;
+            margin-top: 1rem;
+        }
+
+        margin-bottom: 3rem;
+    }
+    &_send-option-container{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -15,8 +27,6 @@
         padding: 1rem;
         margin-bottom: 1rem;
         font-size: .8rem;
-
-
     
         label{
             svg {
@@ -28,8 +38,6 @@
                 font-style: italic;
                 text-transform: uppercase;
             }
-
-
         }
     
         p{

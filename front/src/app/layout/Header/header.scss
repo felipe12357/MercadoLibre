@@ -35,6 +35,14 @@
 @media (min-width: $break-point-3) {
     
     .header{
-        padding-left:15rem;
+        padding-left:20rem;
+
+        .logo{
+            margin-right: 2rem;
+        }
+
+        .search-container{
+            max-width: 35rem;
+        }
     }
 }

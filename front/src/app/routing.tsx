@@ -1,11 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "./layout/MainLayout/MainLayout";
 import { Suspense } from "react";
-import { HomePage, ItemPage, SearchItemsPage } from "./pages";
-import { SearchItemLoader } from "./pages/searchItems/SearchItemLoader";
-import { ItemLoader } from "./pages/item/ItemLoader";
-
-
+import { HomePage, ItemLoader, ItemPage, SearchItemLoader, SearchItemsPage } from "./pages";
 
 
 export const routes = createBrowserRouter([
@@ -22,7 +18,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: "/:search", 
-                element: <Suspense >
+                element: <Suspense>
                             <SearchItemsPage/>
                         </Suspense>,
                 loader:async({params})=> await SearchItemLoader(params as {search:string})

@@ -4,14 +4,16 @@ import './searchItems.scss';
 import { ItemListResponse } from "../../../infraestructure/repositories/item/item.dto";
 import ItemComponent from "./itemComponent/itemComponent";
 const SearchItemsPage =()=>{
+    
     const {categories,items}:ItemListResponse = useLoaderData();
+    const relatedSearch = ['iphone', 'celular', 'celular huawei','celular samsung', 'xiaomi celulares', 'celulares android','celulares a credito']
     return (<div className="main-container">
         <div> 
             <b>Busquedas relacionadas: </b>
-            {categories.map((search,i) => (i === 0) ? <span key={i}> { search } </span> : 
+            {relatedSearch.map((search,i) => (i === 0) ? <span key={i}> { search } </span> : 
                                 <span key={i}> - { search } </span> )}
         </div>
-        <span><AsideMenuComponent /></span>
+       <AsideMenuComponent categories={categories} />
         <main>
             { items.map(item =><ItemComponent key={item.id} item={item}></ItemComponent>)}
         </main>

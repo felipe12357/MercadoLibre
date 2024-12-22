@@ -3,7 +3,7 @@ import { ItemRepository } from "../../domain/repositories/itemRepository";
 
 import { ItemDescriptionDto, ItemDetailDescriptionDto, ItemDetailDto, ItemDto, responseItemDTO } from "./types/item.dto";
 import { IApiAdapter } from "../adapters/api/IApiAdapter";
-import { IModelAdapter, IModelArrayAdapter } from "../adapters/Item/IModelAdapter";
+import { IModelAdapter } from "../adapters/Item/IModelAdapter";
 import { ItemCategoriesModel } from "../../domain/types/itemCategories.model";
 import { ItemDetail } from "../../domain/entities/item/ItemDetail";
 
@@ -14,9 +14,9 @@ export class ItemRepositoryImpl implements ItemRepository {
     constructor(private apiAdapter:IApiAdapter) {
     }
 
-    async getItemList(search:string,itemAdapter: IModelArrayAdapter<ItemDto,ItemCategoriesModel>) {
+    async getItemList(search:string,itemAdapter: IModelAdapter<responseItemDTO,ItemCategoriesModel>) {
         const data = await this.apiAdapter.get(`search?q=${search}`) as responseItemDTO;
-        return itemAdapter.transform(data.results)
+        return itemAdapter.transform(data)
     }
 
     async getItem(id:string,itemAdapter: IModelAdapter<ItemDetailDescriptionDto,ItemDetail>) {
