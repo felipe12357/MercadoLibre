@@ -14,7 +14,7 @@ export class ItemDetailAdapter implements IModelAdapter<ItemDetailDescriptionDto
 
    transform(data:ItemDetailDescriptionDto):ItemDetail {
         const val:ItemDetail = {...this.itemTransform.transform(data),
-                picture:data.pictures[0],
+                picture:data.pictures[0].url,
                 description:data.plain_text,
                 sold_quantity:this.SOLD_QUANTITY
             }

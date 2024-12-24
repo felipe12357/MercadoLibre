@@ -14,7 +14,7 @@ export class ItemRepositoryImpl implements ItemRepository {
     }
 
     async getItem(id:string):Promise<ItemDetail> {
-        const data = await this.apiAdapter.get<ItemDetail>(`items/${id}`);
-        return data;
+        const data = await this.apiAdapter.get<{item:ItemDetail}>(`items/${id}`);
+        return data.item;
     }
 }

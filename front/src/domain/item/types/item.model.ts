@@ -9,6 +9,7 @@ export type Item ={
     free_shipping:boolean
 }
 
-export type ItemDetail = & {
-    sold_quantity:number
+export type ItemDetail = Item & {
+    sold_quantity:number,
+    description:string
 }

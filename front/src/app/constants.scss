@@ -1,9 +1,17 @@
 $color-yellow:#ffe600;
 $color-green:#00a650;
-$color-blue:#0d099b;
+
+$color-blue:#3483fa;
+$color-blue-hover:#2968c8;
+$color-blue2:rgba(65,137,230,.15);
+$color-blue2-hover:rgba(65,137,230,.2);
+$color-blue3:#0d099b;
+
 
 $color-white:#ffffff;
 $color-white2:#ebebeb;
+
+$color-black:rgba(0,0,0,.9);
 
 $color-silver:#C0C0C0;
 
@@ -11,9 +19,11 @@ $color-silver:#C0C0C0;
 $color-grey:#666;
 $color-grey2:#333;
 
+
 $border-style: 1.5px solid #00000000;
-$box-shadow: 0 1px 2px 0 rgba(0,0,0.2);
+$box-shadow: 0 1px 2px 0 rgba(0,0,0,.25);
 $border-radius: 10px;
+$border-radius1: 5px;
 
 $break-point-1:'576px';
 $break-point-2:'768px';

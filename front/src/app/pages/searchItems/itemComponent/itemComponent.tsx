@@ -12,7 +12,7 @@ const ItemComponent:React.FC<ItemComponentProps> =({item})=>{
         <div className="item_image"><img src={item.picture}></img></div>
         <div className="item_description">
             <h4>{item.title}</h4>
-            <div className="item_description_price">$ {price}</div>
+            <div className="item_description_price">{price}</div>
             <div className="item_description_envio">Envío gratis</div>
         </div>
     </Link>)

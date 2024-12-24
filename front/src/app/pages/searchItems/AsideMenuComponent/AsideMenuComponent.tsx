@@ -31,7 +31,7 @@ const AsideMenuComponent:React.FC<ItemComponentProps> =({categories})=>{
        </div>
       
        {mockToogleOptions.map((option,i)=>
-            <div className="aside_send-option-container" key={i}>
+            <div className="aside_send-option-container white-container" key={i}>
                 <label>
                    {(option.icon) && <FontAwesomeIcon icon={option.icon as IconProp} style={{color:option.color}}></FontAwesomeIcon>} 
                    <span><span style={{color:option.color}} className='icon-label'>{option.titleBold}</span> {option.title}</span>

@@ -1,31 +1,12 @@
 @use '../../constants.scss' as *;
-.main-container{
+.search-item-container{
     display: grid;
     grid-template-columns: 300px 1fr;
-    padding: 1rem 2rem;
+
 
     >div{
         grid-column: 1/5;
-        font-size: .8rem;
-        color: $color-grey2;
-        padding-bottom:2rem;
-
-        span{
-            cursor: pointer;
-        }
     }
 
 }
 
-@media (min-width: $break-point-3) {
-    .main-container{
-        padding: 1rem 5rem; 
-    }
-}
-
-@media (min-width: $break-point-4) {
-    
-    .main-container{
-        padding: 1rem 15rem; 
-    }
-}
