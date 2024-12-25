@@ -3,9 +3,10 @@ import { RelatedSearchesComponent } from "../../components/relatedSearches/Relat
 import './item.scss';
 import { ItemDetail } from "../../../domain/item/types/item.model";
 import { currencyFormatter } from "../../functions/currencyFormat";
+import useCustomLoaderData from "../../customHook/useLoaderData";
 const ItemPage = ()=>{
-    const item:ItemDetail = useLoaderData();
 
+    const item:ItemDetail = useCustomLoaderData()
     const price = currencyFormatter(item.price.currency,item.price.amount,item.price.decimals);
 
     const priceInterest = (item.price.amount *.3) + item.price.amount
