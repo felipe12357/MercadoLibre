@@ -14,8 +14,9 @@ export class ItemRepositoryImpl implements ItemRepository {
     constructor(private apiAdapter:IApiAdapter) {
     }
 
-    async getItemList(search:string,itemAdapter: IModelAdapter<responseItemDTO,ItemCategoriesModel>) {
+    async getItemList(search:string,itemAdapter: IModelAdapter<responseItemDTO,ItemCategoriesModel>,numberOfElements:number) {
         const data = await this.apiAdapter.get(`search?q=${search}`) as responseItemDTO;
+        data.results.length = numberOfElements;
         return itemAdapter.transform(data)
     }
 
