@@ -1,9 +1,10 @@
 import { Author } from "../../repositories/item/item.dto";
+import { ISignAdapter } from "./ISignAdapter";
 
 
-export class SignAdapter {
+export class SignAdapter implements ISignAdapter{
 
-    deleteSign(element:{author:Author}){
+    deleteSign<T extends {author:Author}>(element:T): Omit<T, 'author'>{
         const { author, ...newElement } = element;
         return newElement; 
     }

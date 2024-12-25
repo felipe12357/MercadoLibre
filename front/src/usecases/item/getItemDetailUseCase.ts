@@ -1,5 +1,5 @@
 import { AxiosApiAdapter } from "../../infraestructure/adapters/api/AxiosApiAdapter";
-import { SignAdapter } from "../../infraestructure/adapters/signAdapter/signAdapter";
+import { SignAdapter } from "../../infraestructure/adapters/signAdapter/SignAdapter";
 import { ItemRepositoryImpl } from "../../infraestructure/repositories/item/itemRepositoryImp";
 
 const getItemDetailUseCase = (param:string)=>{
